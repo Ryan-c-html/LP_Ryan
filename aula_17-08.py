@@ -13,11 +13,13 @@ def editarContato():
     a = input("Qual contato você deseja editar? \n")
     print("Você deseja editar o contato do(a) " + nome[a] + "?\n")
     l = input("Se sim escreva 's', e se não escreva 'n'")
-    
+
     print()
 
 def removerContato():
-    pass
+    a = input("Deseja retirar qual contato da sua agenda?")
+    print("Você deseja retirar o contato do(a) " + nome[a] + "?\n")
+    l = input("Se sim escreva 's', e se não escreva 'n'")
 
 def verContato():
     pass
