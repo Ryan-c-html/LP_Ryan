@@ -5,17 +5,16 @@ nome = []
 telefone = []
 
 def novoContato():
-    nome[x] = input("Digite um nome: ")
-    telefone[x] = input("Digite um telefone: ")
+    nome[x] = input("Digite um nome: \n")
+    telefone[x] = input("Digite um telefone: \n")
     x = x + 1
-    pass
 
 def editarContato():
     a = input("Qual contato você deseja editar? \n")
-    print("Você deseja editar o contato do(a) " + nome[a] + "?")
-    a = input()
+    print("Você deseja editar o contato do(a) " + nome[a] + "?\n")
+    l = input("Se sim escreva 's', e se não escreva 'n'")
+    
     print()
-    pass
 
 def removerContato():
     pass
