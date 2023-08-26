@@ -1,5 +1,5 @@
 ## Finalidade 
-O repositório tem o objetivo de servir como armazenamento das programações que serão feitas na aula de * Linguagens de programação. *
+O **repositório** tem o objetivo de servir como armazenamento das programações que serão feitas na aula de  **Linguagens de programação**.
 --- 
 # Codigos
 
