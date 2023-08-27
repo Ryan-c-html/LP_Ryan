@@ -32,8 +32,8 @@ frame_tabela.grid(row=2, column=0, columnspan=2, padx=10,pady=1, sticky=NSEW)
 
 # Configurando frame cima
 
-l_nome = Label(frame_cima, text="Agenda telefonica", anchor=NE, font=('times 20 bold'), bg=co1, fg=co3)
-l_nome.place(x=0, y=5)
+l_nome = Label(frame_cima, text="Lista telefônica", anchor=NE, font=('times 20 bold'), bg=co1, fg=co3)
+l_nome.place(x=5, y=5)
 
 
 janela.mainloop()
