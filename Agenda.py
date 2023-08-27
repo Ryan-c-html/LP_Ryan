@@ -1,4 +1,8 @@
 # inclusão das bibliotecas 
+from tkinter.ttk import*
+from tkinter import*
+from tkinter import messagebox
+
 
 
 nome = []
