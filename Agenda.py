@@ -4,11 +4,14 @@ from tkinter import*
 from tkinter import messagebox
 
 # Variaveis das cores
-
-co0 = "#f0f3f5" # preto
-co1 = "#f0f3f5" # cinza
-co2 = "#feffff" # branco
-co3 = "#38576b" # black
+co0 = "#f0f3f5"  # Preto
+co1 = "#f0f3f5"  # cinza
+co2 = "#feffff"  # branco
+co3 = "#38576b"  # black
+co4 = "#403d3d"  # letra
+co5 = "#6f9fbd"  # azul
+co6 = "#ef5350"  # vermelha
+co7 = "#93cd95"  # verde
 
 # Criação da janela
 janela = Tk()
