@@ -15,4 +15,4 @@ O projeto da agenda tem como objetivo treinar programação e criar uma agenda t
 
 --- 
 ## Site Web
-- **Linguagem:** Python, HTML e Css.
+- **Linguagem:** `Python, HTML e Css.`

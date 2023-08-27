@@ -1,4 +1,4 @@
-# inclusão das bibliotecas 
+# inclusao das bibliotecas 
 from tkinter.ttk import*
 from tkinter import*
 from tkinter import messagebox
@@ -13,7 +13,7 @@ co5 = "#6f9fbd"  # azul
 co6 = "#ef5350"  # vermelha
 co7 = "#93cd95"  # verde
 
-# Criação da janela
+# Criacao da janela
 janela = Tk()
 janela.title("Agenda")
 janela.configure(background=co1)
