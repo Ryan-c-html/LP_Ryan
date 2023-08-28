@@ -40,7 +40,7 @@ l_nome.place(x=10, y=5)
 
 #configurando frame do meio
 
-l_linha = Label(frame_baixo, text="Nome:", anchor=NE, font=("times 14 bold"), fg=co1)
+l_linha = Label(frame_baixo, text="Nome:", anchor=NE, font=("times 14 bold"), fg=co3)
 l_linha.place(x=10, y=10)
 
 janela.mainloop()
