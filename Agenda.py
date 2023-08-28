@@ -42,6 +42,8 @@ l_nome.place(x=10, y=5)
 
 l_linha = Label(frame_baixo, text="Nome:*", anchor=NW, font=("arial 12 bold"),bg=co1, fg=co3)
 l_linha.place(x=20, y=10)
+e_linha = Entry(frame_baixo, width=25, justify='left', font=('',10), highlightthickness=1)
+e_linha.place(x=90, y=20)
 
 l_linha1 = Label(frame_baixo, text="Email:*", anchor=NW, font=("arial 12 bold"),bg=co1, fg=co3)
 l_linha1.place(x=20, y=32)
