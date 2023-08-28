@@ -40,5 +40,6 @@ l_nome.place(x=10, y=5)
 
 #configurando frame do meio
 
+#escrevendo qualquer coisa e dando commit
 
 janela.mainloop()
