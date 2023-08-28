@@ -13,7 +13,7 @@ co5 = "#6f9fbd"  # azul
 co6 = "#ef5350"  # vermelha
 co7 = "#93cd95"  # verde
 
-# Criacao da janela.
+# Criacao da janela
 janela = Tk()
 janela.title("Agenda")
 janela.configure(background=co1)
