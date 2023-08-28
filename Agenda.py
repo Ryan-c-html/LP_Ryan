@@ -43,7 +43,10 @@ l_nome.place(x=10, y=5)
 l_linha = Label(frame_baixo, text="Nome:*", anchor=NE, font=("arial 12 bold"), fg=co3)
 l_linha.place(x=20, y=10)
 
-l_linha1 = Label(frame_baixo, text="Telefone:*", anchor=NE, font=("arial 12 bold"), fg=co3)
-l_linha1.place(x=20, y=38)
+l_linha1 = Label(frame_baixo, text="Email:*", anchor=NE, font=("arial 12 bold"), fg=co3)
+l_linha1.place(x=20, y=34)
+
+l_linha2 = Label(frame_baixo, text="Telefone:*", anchor=NE, font=("arial 12 bold"), fg=co3)
+l_linha2.place(x=20, y=56)
 
 janela.mainloop()
