@@ -66,4 +66,8 @@ l_adicionar.place(x=360 , y=10)
 l_deletar = Button(frame_baixo, text="Deletar", font=('arial 11 bold'), bg=co6, fg=co4, relief=RAISED, overrelief=RIDGE)
 l_deletar.place(x=360 , y=50)
 
+# Configurando frame tabela
+
+
+
 janela.mainloop()
