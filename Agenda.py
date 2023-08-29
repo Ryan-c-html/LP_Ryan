@@ -57,7 +57,7 @@ e_tel.place(x=110, y=60)
 
 l_pesq = Button(frame_baixo, text="Pesquisar", font=('Ivy 8 bold'), bg=co1, fg=co4, relief=RAISED, overrelief=RIDGE)
 l_pesq.place(x=20, y=90)
-e_pesq = Entry(frame_baixo, width=16, justify='left', font=('',14), highlightthickness=1)
+e_pesq = Entry(frame_baixo, width=25, justify='left', font=('',10), highlightthickness=1)
 e_pesq.place(x=110, y=90)
 
 janela.mainloop()
