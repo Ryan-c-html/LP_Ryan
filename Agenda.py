@@ -61,6 +61,9 @@ e_pesq = Entry(frame_baixo, width=25, justify='left', font=('',10), highlightthi
 e_pesq.place(x=110, y=90)
 
 l_inserir = Button(frame_baixo, text="Inserir", font=('arial 10 bold'), bg=co7, fg=co4, relief=RAISED, overrelief=RIDGE)
-l_inserir.place(x=360 , y=20)
+l_inserir.place(x=360 , y=10)
+
+l_excluir = Button(frame_baixo, text="Excluir", font=('arial 10 bold'), bg=co6, fg=co4, relief=RAISED, overrelief=RIDGE)
+l_excluir.place(x=420 , y=10)
 
 janela.mainloop()
