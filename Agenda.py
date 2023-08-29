@@ -55,8 +55,8 @@ l_tel.place(x=20, y=60)
 e_tel = Entry(frame_baixo, width=25, justify='left', font=('',10), highlightthickness=1)
 e_tel.place(x=110, y=60)
 
-b_pesq = Button(frame_baixo, text="Pesquisar")
-b_pesq.place(x=20, y=90)
+l_pesq = Button(frame_baixo, text="Pesquisar")
+l_pesq.place(x=20, y=90)
 e_pesq = Entry(frame_baixo, width=25, justify='left', font=('',10), highlightthickness=1)
 e_pesq.place(x=110, y=90)
 
