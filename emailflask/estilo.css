@@ -1,9 +1,7 @@
 body{
     text-align:center;
     margin-top: 0%;
-    background-image: url("bluepen.jpg");
-    background-repeat: no-repeat, repeat-x;
-    background-position: top right, center;
-    background-size: cover;
+}
+.titulo{
 
 }
