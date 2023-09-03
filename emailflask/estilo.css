@@ -1,7 +1,24 @@
 body{
     text-align:center;
     margin-top: 0%;
+    background-color: rgb(242, 249, 255);
 }
 .titulo{
-
+    
+}
+.text{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.entrar{
+    border-radius: 18px;
+    margin-top: 10px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.salvar{
+    border-radius: 18px;
+    margin-top: 10px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
 }
