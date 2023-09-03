@@ -2,18 +2,18 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="estilo.css">
-    <title>Pagina de Dados</title>
+    <title>Carta</title>
 </head>
 <body>
-    <h1 class="titulo">Página de Dados</h1>
+    <h1 class="titulo">Escreva a sua carta</h1>
     <form action="/pagina_dados" method="post">
         <label for="data" class="text">Data:</label><br>
-        <input type="text" id="data" name="data"><br>
+        <input type="text" id="data" name="data" placeholder="Dia/Mes/Ano"><br>
         <label for="destinatario" class="text">Destinatário:</label><br>
-        <input type="text" id="destinatario" name="destinatario"><br>
+        <input type="text" id="destinatario" name="destinatario" placeholder="Nome"><br>
         <label for="mensagem" class="text">Mensagem:</label><br>
-        <textarea id="mensagem" name="mensagem"></textarea><br>
-        <label for="remetente" class="text">Remetente:</label><br>
+        <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem"></textarea><br>
+        <label for="remetente" class="text" placeholder="Nome">Remetente:</label><br>
         <input type="text" id="remetente" name="remetente"><br>
         <button class="salvar">Salvar</button>
     </form>
