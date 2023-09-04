@@ -22,5 +22,4 @@ def pagina_dados():
 
     return render_template('pagina_dados.html')
 
-if __name__ == '_main_':
-    app.run(debug=True)
+app.run()
