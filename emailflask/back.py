@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 # Página de login
 @app.route('/')
@@ -22,5 +22,5 @@ def pagina_dados():
 
     return render_template('pagina_dados.html')
 
-if _name_ == '_main_':
+if __name__ == '_main_':
     app.run(debug=True)
