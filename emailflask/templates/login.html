@@ -5,13 +5,23 @@
     <title>Login</title>
 </head>
 <body>
-    <h1 class="titulo">Login</h1>
+    <h1 class="titulo">ECA-MAIL</h1>
+    <h2 class="titulo">Login</h2>
+
     <form action="/pagina_dados" method="get">
         <label for="usuario" class="text">Usuario:</label><br>
         <input type="text" id="usuario" name="usuario" placeholder="CPF"><br>
         <label for="senha" class="text">Senha:</label><br>
         <input type="password" id="senha" name="senha" placeholder="senha"><br>
-        <button class="entrar">Entrar</button>
+        <button class="button"><span>Entrar</span></button>
+    </form>
+    <form action="/cadastro" method="get">
+        <label for="nome" class="text">Usuario:</label><br>
+        <label for="senha" class="password">Usuario:</label><br>
+        <input type="text" id="nome" name="nome" placeholder="CPF"><br>
+        <label for="senha" class="text">Senha:</label><br>
+        <input type="password" id="senha" name="senha" placeholder="senha"><br>
+        <button class="button"><span>Entrar</span></button>
     </form>
 </body>
 </html>

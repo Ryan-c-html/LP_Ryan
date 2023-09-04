@@ -1,11 +1,16 @@
 body{
     text-align:center;
-    margin-top: 0%;
-    background-color: rgb(242, 249, 255);
+    background-image: url(large.5aeb1fd71ff3d_DittoDancing.gif.08cc659ac16780c7a07d44534a019d22.gif);
+    background-color: #00FF7F;
+    background-size: 40px;
+    background-repeat: no-repeat;
+    width: 100%;
+    
 }
 textarea{
     width: 300px;
     height: 150px;
+    background-color: #90EE90;
 }
 .titulo{
     font-family: 'Times New Roman', Times, serif;
@@ -25,4 +30,21 @@ textarea{
     margin-top: 10px;
     font-size: 18px;
     font-family: 'Times New Roman', Times, serif;
+}
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    border: none;
+    background-image: url(200w.gif);
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.botão{
+    background-color: #90EE90;
 }
