@@ -3,7 +3,7 @@ from flask import Flask, render_template, request, redirect, url_for
 app = Flask(__name__)
 
 # Página de login
-@app.route('/main', methods['GET'])
+@app.route('/main', methods=['GET'])
 def main():
     if request.method == 'POST':
         name = request.form.get("botao")
@@ -13,7 +13,7 @@ def main():
             render_template('cadastro.html')
     return render_template('main.html')
 
-@app.route('/login', methods=['gets'])
+@app.route('/login', methods=['GET'])
 def login():
     return render_template('login.html')
 
@@ -32,6 +32,7 @@ def pagina_dados():
 
     return render_template('pagina_dados.html')
 
+#Pagina de cadastro
 @app.route('/cadastro', methods=['POST', 'POST'])
 def cadastro():
         return render_template('cadastro.html')
