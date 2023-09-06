@@ -22,9 +22,14 @@ def login():
 #Pagina de cadastro
 @app.route('/cadastro', methods=['POST', 'GET'])
 def cadastro():
-        return render_template('cadastro.html')
+    if request.method == 'POST':
+        nome  = request.form['nome']
+        cpf   = request.form['cpf']
+        senha = request.form['senha']
+        name = request.form.get("bot")
+    
+    return render_template('cadastro.html')
 
-# Página após o login
 # Essa pagina vai receber a carta e suas variaveis e após isso vai criar a carta em txt
 @app.route('/pagina_dados', methods=['POST', 'GET'])
 def pagina_dados():
@@ -40,5 +45,5 @@ def pagina_dados():
 
     return render_template('pagina_dados.html')
 
-
+# Essa função faz com que o programa rode
 app.run()
