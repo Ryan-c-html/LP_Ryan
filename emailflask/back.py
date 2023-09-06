@@ -10,7 +10,7 @@ def main():
         name = request.form.get("botao")
         if name == 'logar':
             return redirect ("/login")
-        elif name == 'cadastro':
+        elif name == 'cadastrar':
             return redirect ("/cadastro")
     return render_template('main.html')
 
@@ -42,6 +42,8 @@ def pagina_dados():
         filename = f"{data}_{destinatario}.txt"
         with open(filename, 'w') as f:
             f.write(f"Data: {data}\nDestinatario: {destinatario}\nMensagem: {mensagem}\nRemetente: {remetente}")
+        return redirect("/login")
+
 
     return render_template('pagina_dados.html')
 
