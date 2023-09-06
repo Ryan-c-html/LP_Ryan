@@ -39,11 +39,10 @@ def pagina_dados():
         mensagem = request.form['mensagem']
         remetente = request.form['remetente']
 
-        filename = f"{data}_{destinatario}.txt"
-        with open(filename, 'w') as f:
-            f.write(f"Data: {data}\nDestinatario: {destinatario}\nMensagem: {mensagem}\nRemetente: {remetente}")
+        f = open(f'{data}_{destinatario}.txt', 'w')
+        f.write(f"Data: {data}\nDestinatario: {destinatario}\nMensagem: {mensagem}\nRemetente: {remetente}")
+        
         return redirect("/login")
-
 
     return render_template('pagina_dados.html')
 
