@@ -17,6 +17,11 @@ def main():
 # Pagina de login
 @app.route('/login', methods=['POST', 'GET'])
 def login():
+    if request.method == 'POST':
+        nome  = request.form['usuario']
+        senha = request.form['senha']
+        return redirect("/pagina_dados")
+    
     return render_template('login.html')
 
 #Pagina de cadastro
@@ -26,6 +31,9 @@ def cadastro():
         nome  = request.form['nome']
         cpf   = request.form['cpf']
         senha = request.form['senha']
+        r = open(f'usuarios.txt', 'a')
+        r.write(f"\nNome: {nome} \nSenha: {senha}")
+        return redirect("/login")
     
     return render_template('cadastro.html')
 
@@ -44,6 +52,10 @@ def pagina_dados():
         return redirect("/login")
 
     return render_template('pagina_dados.html')
+
+def gerenciamento():
+
+    return 
 
 # Essa função faz com que o programa rode
 app.run()
