@@ -1,0 +1,4 @@
+Data: 2023-09-07
+Destinatario: Dani
+Mensagem: Oi, Dani. Tudo bem?
+Remetente: Ryan
