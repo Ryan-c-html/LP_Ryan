@@ -26,7 +26,6 @@ def cadastro():
         nome  = request.form['nome']
         cpf   = request.form['cpf']
         senha = request.form['senha']
-        name = request.form.get("bot")
     
     return render_template('cadastro.html')
 
