@@ -1,0 +1,47 @@
+body{
+    background-image: url(large.5aeb1fd71ff3d_DittoDancing.gif.08cc659ac16780c7a07d44534a019d22.gif);
+    background-color: #00FF7F;
+    width: 100%;
+    background-size: 40px;
+    background-repeat: no-repeat;
+}
+.salvar{
+    border-radius: 18px;
+    margin-top: 10px;
+    margin-left: 400px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+textarea{
+    width: 300px;
+    height: 150px;
+    background-color: #c2fdc2;
+}
+.forms{
+    background-color: #c2fdc2;
+}
+.caixa{
+    width: 500px;
+    height: 350px;
+    border-radius: 18px;
+    background-color: #13ad72;
+    display: flex;
+    /*flex-direction: row;
+    justify-content: center;
+    align-items: center;*/
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.text{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.titulo{
+    text-align: center;
+}
