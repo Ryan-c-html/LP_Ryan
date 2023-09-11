@@ -20,6 +20,7 @@ def login():
     if request.method == 'POST':
         nome  = request.form['usuario']
         senha = request.form['senha']
+        l = open("usuarios.txt", "r")
         return redirect("/pagina_dados")
     
     return render_template('login.html')
@@ -31,8 +32,8 @@ def cadastro():
         nome  = request.form['nome']
         cpf   = request.form['cpf']
         senha = request.form['senha']
-        r = open(f'usuarios.txt', 'a')
-        r.write(f"\nNome: {nome} \nSenha: {senha}")
+        r = open("usuarios.txt", "a")
+        r.write(f"\n{nome} - {senha} - {cpf}")
         return redirect("/login")
     
     return render_template('cadastro.html')
@@ -58,4 +59,4 @@ def gerenciamento():
     return 
 
 # Essa função faz com que o programa rode
-app.run()
+app.run(debug=True)
