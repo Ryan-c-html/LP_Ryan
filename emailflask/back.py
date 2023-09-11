@@ -20,7 +20,8 @@ def login():
     if request.method == 'POST':
         nome  = request.form['usuario']
         senha = request.form['senha']
-        l = open("usuarios.txt", "r")
+        l = open("emailflask/UsuariosCadastrados/usuarios.txt", "r")
+
         return redirect("/pagina_dados")
     
     return render_template('login.html')
@@ -32,7 +33,7 @@ def cadastro():
         nome  = request.form['nome']
         cpf   = request.form['cpf']
         senha = request.form['senha']
-        r = open("usuarios.txt", "a")
+        r = open("emailflask/UsuariosCadastrados/usuarios.txt", "a")
         r.write(f"\n{nome} - {senha} - {cpf}")
         return redirect("/login")
     
