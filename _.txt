@@ -1,0 +1,4 @@
+Data: 
+Destinatario: 
+Mensagem: 
+Remetente: 
