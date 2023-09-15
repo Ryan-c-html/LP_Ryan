@@ -47,3 +47,10 @@ textarea{
 .titulo{
     text-align: center;
 }
+.Ditto{
+    cursor: pointer;
+}
+.Ditto{
+    width: 40px;
+    height: 40px;
+}
