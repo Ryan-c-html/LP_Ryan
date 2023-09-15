@@ -17,15 +17,6 @@ def main():
 # Pagina de login
 @app.route('/login', methods=['POST', 'GET'])
 def login():
-    if request.method == 'POST':
-        #nome  = request.form['usuario']
-        #senha = request.form['senha']
-        l = open("emailflask/UsuariosCadastrados/usuarios.txt", "r")
-        #button = request.form.get("botao")
-        #if button == 'cadastrar':
-        #    return redirect ("/cadastro")
-
-        return redirect("/pagina_dados")
     
     return render_template('login.html')
 

@@ -9,15 +9,15 @@
     <div>
         <div>
             <h2 class="titulo">Login</h2>
-            <form action="/pagina_dados" method="get">
+            <form method="POST">
                 <label for="usuario" class="text">Usuario:</label><br>
-                <input type="text" id="usuario" name="usuario" placeholder="CPF" class="forms"><br>
+                <input type="text" id="usuario" name="Nome" placeholder="Nome" class="forms"><br>
                 <label for="senha" class="text">Senha:</label><br>
-                <input type="password" id="senha" name="senha" placeholder="Senha" class="forms"><br>
+                <input type="password" id="senha" name="Senha" placeholder="Senha" class="forms"><br>
                 <button class="button"><span>Entrar</span></button><br>
-                <p>Não tem conta ainda?</p>
-                <!--<button class="buttonCadastro" value="cadastrar" name="botao">Cadastrar</button>-->
             </form>
+            <p>Não tem conta ainda?</p>
+            <button class="buttonCadastro">Cadastrar</button>
         </div>
     </div>
 </body>
