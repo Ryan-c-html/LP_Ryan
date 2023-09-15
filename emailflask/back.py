@@ -7,17 +7,8 @@ app = Flask(__name__)
 @app.route('/', methods=['POST', 'GET'])
 def main():
     if request.method == 'POST':
-        name = request.form.get("botao")
-        if name == 'logar':
-            return redirect ("/login")
-        elif name == 'cadastrar':
-            return redirect ("/cadastro")
-    return render_template('main.html')
+        return redirect("/pagina_dados")
 
-# Pagina de login
-@app.route('/login', methods=['POST', 'GET'])
-def login():
-    
     return render_template('login.html')
 
 #Pagina de cadastro
@@ -48,10 +39,6 @@ def pagina_dados():
         return redirect("/login")
 
     return render_template('pagina_dados.html')
-
-def gerenciamento():
-
-    return 
 
 # Essa função faz com que o programa rode
 app.run(debug=True)

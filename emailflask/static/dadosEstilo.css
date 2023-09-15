@@ -10,6 +10,7 @@ body{
     margin-left: 400px;
     font-size: 18px;
     font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
 }
 textarea{
     width: 470px;
