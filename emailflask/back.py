@@ -7,20 +7,26 @@ app = Flask(__name__)
 @app.route('/', methods=['POST', 'GET'])
 def main():
     if request.method == 'POST':
-        return redirect("/pagina_dados")
+        loginNome = request.form['Nome']
+        loginSenha = request.form['Senha']
 
+        if verificarCredenciais(loginNome, loginSenha):
+            return redirect("/pagina_dados")
+        
     return render_template('login.html')
 
 #Pagina de cadastro
 @app.route('/cadastro', methods=['POST', 'GET'])
 def cadastro():
     if request.method == 'POST':
-        nome  = request.form['nome']
-        cpf   = request.form['cpf']
-        senha = request.form['senha']
+        cadastroNome = request.form['nome']
+        cadastroCpf = request.form['cpf']
+        cadastroSenha = request.form['senha']
+        
         r = open("emailflask/UsuariosCadastrados/usuarios.txt", "a")
-        r.write(f"\n{nome} - {senha} - {cpf}")
-        return redirect("/login")
+        r.write(f"\n{cadastroNome} - {cadastroSenha}")
+        
+        return redirect("/pagina_dados")
     
     return render_template('cadastro.html')
 
@@ -39,6 +45,22 @@ def pagina_dados():
         return redirect("/login")
 
     return render_template('pagina_dados.html')
+
+def verificarCredenciais(Vnome, Vsenha):
+    try:
+        usuarios = {}
+        with open("emailflask/UsuariosCadastrados/usuarios.txt", "r") as arquivo:
+            linhas = arquivo.readlines()
+            for linha in linhas:
+                Rnome, Rsenha = linha.strip().split(" - ")
+                usuarios[Rnome] = Rsenha
+                if Rnome == Vnome and Rsenha == Vsenha:
+                    return True
+    except FileNotFoundError:
+        print("O arquivo de usuários não foi encontrado.")
+    except Exception as e:
+        print(f"Ocorreu um erro: {str(e)}")    
+    return False
 
 # Essa função faz com que o programa rode
 app.run(debug=True)
