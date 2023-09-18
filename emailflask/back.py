@@ -1,5 +1,6 @@
 # Inclusão da biblioteca
 from flask import Flask, render_template, request, redirect, url_for
+from fpdf import FPDF
 
 app = Flask(__name__)
 
@@ -9,10 +10,9 @@ def main():
     if request.method == 'POST':
         loginNome = request.form['Nome']
         loginSenha = request.form['Senha']
-
-        if verificarCredenciais(loginNome, loginSenha):
-            return redirect("/pagina_dados")
-        
+        #if verificarCredenciais(loginNome, loginSenha):
+        #    return redirect("/pagina_dados")
+        return redirect("/pagina_dados")
     return render_template('login.html')
 
 #Pagina de cadastro
@@ -20,7 +20,6 @@ def main():
 def cadastro():
     if request.method == 'POST':
         cadastroNome = request.form['nome']
-        cadastroCpf = request.form['cpf']
         cadastroSenha = request.form['senha']
         
         r = open("emailflask/UsuariosCadastrados/usuarios.txt", "a")
@@ -42,9 +41,22 @@ def pagina_dados():
         f = open(f'{data}_{destinatario}.txt', 'w')
         f.write(f"Data: {data}\nDestinatario: {destinatario}\nMensagem: {mensagem}\nRemetente: {remetente}")
         
-        return redirect("/login")
+        #criaPDF(data, destinatario)
+
+        return redirect("/")    
 
     return render_template('pagina_dados.html')
+
+def criaPDF(data, destinatario):
+    pdf = FPDF()
+    pdf.add_page()
+    pdf.set_font("Arial", size=13)
+    txt = open("{data}_{destinatario}.txt", "r")
+    lendo = txt.readlines()
+    for ler in lendo:
+        pdf.cell(200, 10, ler)
+    pdf.output(f"emailflask/cartas/Cartas_PDF/{data}-{destinatario}.pdf")
+    pdf.close()
 
 def verificarCredenciais(Vnome, Vsenha):
     try:
