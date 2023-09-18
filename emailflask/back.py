@@ -19,11 +19,11 @@ def main():
 @app.route('/cadastro', methods=['POST', 'GET'])
 def cadastro():
     if request.method == 'POST':
-        cadastroNome = request.form['nome']
-        cadastroSenha = request.form['senha']
+        #cadastroNome = request.form['nome']
+        #cadastroSenha = request.form['senha']
         
-        r = open("emailflask/UsuariosCadastrados/usuarios.txt", "a")
-        r.write(f"\n{cadastroNome} - {cadastroSenha}")
+        #r = open("emailflask/UsuariosCadastrados/usuarios.txt", "a")
+        #r.write(f"\n{cadastroNome} - {cadastroSenha}")
         
         return redirect("/pagina_dados")
     
