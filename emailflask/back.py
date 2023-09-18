@@ -1,5 +1,6 @@
 # Inclusão da biblioteca
 from flask import Flask, render_template, request, redirect, url_for
+from fpdf import FPDF
 
 app = Flask(__name__)
 
@@ -7,33 +8,24 @@ app = Flask(__name__)
 @app.route('/', methods=['POST', 'GET'])
 def main():
     if request.method == 'POST':
-        name = request.form.get("botao")
-        if name == 'logar':
-            return redirect ("/login")
-        elif name == 'cadastrar':
-            return redirect ("/cadastro")
-    return render_template('main.html')
-
-# Pagina de login
-@app.route('/login', methods=['POST', 'GET'])
-def login():
-    if request.method == 'POST':
-        nome  = request.form['usuario']
-        senha = request.form['senha']
+        loginNome = request.form['Nome']
+        loginSenha = request.form['Senha']
+        #if verificarCredenciais(loginNome, loginSenha):
+        #    return redirect("/pagina_dados")
         return redirect("/pagina_dados")
-    
     return render_template('login.html')
 
 #Pagina de cadastro
 @app.route('/cadastro', methods=['POST', 'GET'])
 def cadastro():
     if request.method == 'POST':
-        nome  = request.form['nome']
-        cpf   = request.form['cpf']
-        senha = request.form['senha']
-        r = open(f'usuarios.txt', 'a')
-        r.write(f"\nNome: {nome} \nSenha: {senha}")
-        return redirect("/login")
+        #cadastroNome = request.form['nome']
+        #cadastroSenha = request.form['senha']
+        
+        #r = open("emailflask/UsuariosCadastrados/usuarios.txt", "a")
+        #r.write(f"\n{cadastroNome} - {cadastroSenha}")
+        
+        return redirect("/pagina_dados")
     
     return render_template('cadastro.html')
 
@@ -49,13 +41,38 @@ def pagina_dados():
         f = open(f'{data}_{destinatario}.txt', 'w')
         f.write(f"Data: {data}\nDestinatario: {destinatario}\nMensagem: {mensagem}\nRemetente: {remetente}")
         
-        return redirect("/login")
+        #criaPDF(data, destinatario)
+
+        return redirect("/")    
 
     return render_template('pagina_dados.html')
 
-def gerenciamento():
+def criaPDF(data, destinatario):
+    pdf = FPDF()
+    pdf.add_page()
+    pdf.set_font("Arial", size=13)
+    txt = open("{data}_{destinatario}.txt", "r")
+    lendo = txt.readlines()
+    for ler in lendo:
+        pdf.cell(200, 10, ler)
+    pdf.output(f"emailflask/cartas/Cartas_PDF/{data}-{destinatario}.pdf")
+    pdf.close()
 
-    return 
+def verificarCredenciais(Vnome, Vsenha):
+    try:
+        usuarios = {}
+        with open("emailflask/UsuariosCadastrados/usuarios.txt", "r") as arquivo:
+            linhas = arquivo.readlines()
+            for linha in linhas:
+                Rnome, Rsenha = linha.strip().split(" - ")
+                usuarios[Rnome] = Rsenha
+                if Rnome == Vnome and Rsenha == Vsenha:
+                    return True
+    except FileNotFoundError:
+        print("O arquivo de usuários não foi encontrado.")
+    except Exception as e:
+        print(f"Ocorreu um erro: {str(e)}")    
+    return False
 
 # Essa função faz com que o programa rode
-app.run()
+app.run(debug=True)

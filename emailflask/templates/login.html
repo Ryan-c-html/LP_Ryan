@@ -5,15 +5,26 @@
     <title>Login</title>
 </head>
 <body>
+    <a href="https://matias.ma/nsfw/">
+        <div class="Ditto">
+        </div>
+    </a>
     <h1 class="titulo">ECA-MAIL</h1>
-    <h2 class="titulo">Login</h2>
-
-    <form action="/pagina_dados" method="get">
-        <label for="usuario" class="text">Usuario:</label><br>
-        <input type="text" id="usuario" name="usuario" placeholder="CPF"><br>
-        <label for="senha" class="text">Senha:</label><br>
-        <input type="password" id="senha" name="senha" placeholder="Senha"><br>
-        <button class="button"><span>Entrar</span></button>
-    </form>
+    <div class="mail_center">
+        <div class="login_div">
+            <h2 class="titulo">Login</h2>
+            <form method="POST" class="formLogin">
+                <label for="usuario" class="text">Usuario:</label><br>
+                <input type="text" id="usuario" name="Nome" placeholder="Nome" class="forms"><br>
+                <label for="senha" class="text">Senha:</label><br>
+                <input type="password" id="senha" name="Senha" placeholder="Senha" class="forms"><br>
+                <button class="button"><span>Entrar</span></button><br>
+            </form>
+            <p class="textConta">Não possui conta ainda?</p>
+            <form method="POST" action="/cadastro">
+                <button class="buttonCadastro">Cadastro</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

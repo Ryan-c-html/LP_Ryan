@@ -1,18 +1,20 @@
 body{
-    text-align:center;
     background-image: url(large.5aeb1fd71ff3d_DittoDancing.gif.08cc659ac16780c7a07d44534a019d22.gif);
     background-color: #00FF7F;
     background-size: 40px;
     background-repeat: no-repeat;
     width: 100%;
-    
 }
-textarea{
-    width: 300px;
-    height: 150px;
-    background-color: #90EE90;
+.corpoDoTexto{
+    text-align: center;
+    background-image: url(large.5aeb1fd71ff3d_DittoDancing.gif.08cc659ac16780c7a07d44534a019d22.gif);
+    background-color: #00FF7F;
+    background-size: 40px;
+    background-repeat: no-repeat;
+    width: 100%;
 }
 .titulo{
+    text-align: center;
     font-family: 'Times New Roman', Times, serif;
 }
 .text{
@@ -24,12 +26,14 @@ textarea{
     margin-top: 10px;
     font-size: 18px;
     font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
 }
 .salvar{
     border-radius: 18px;
     margin-top: 10px;
     font-size: 18px;
     font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
 }
 .button {
     display: inline-block;
@@ -38,13 +42,73 @@ textarea{
     background-image: url(200w.gif);
     text-align: center;
     font-size: 28px;
+    font-family: fantasy, Impact;
+    color: #fff;
     padding: 20px;
     width: 200px;
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
 }
-
+.button:hover{
+    transform: scale(1.05);
+}
+.buttonCadastro{
+    font-size: 18px;
+    font-family: 'Andale Mono', monospace;
+    font-size: small;
+    background-color: #43ffa1;
+    color: #366e36;
+    cursor: pointer;
+    border: 1px;
+    border-style: outset;
+    border-radius: 2px;
+}
+.buttonCadastro:hover{
+    background-color: #7affc1;
+    border: 1px;
+    border-style: inset;
+    border-radius: 2px;
+    transform: scale(1.005);
+}
 .botão{
     background-color: #90EE90;
+}
+.forms{
+    background-color: #c2fdc2;
+    box-shadow: inset 0 0 10px -2px rgb(145, 255, 123);
+    margin-bottom: 10px;
+    border: none;
+}
+.forms:focus{
+    outline: 0;
+    transform: scale(1.1);
+}
+.mail_center{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.login_div{
+    width: 500px;
+    height: 340px;
+    text-align: center;
+    border-radius: 18px;
+    background-color: #13ad72;
+    box-shadow:  inset 0 0 2em rgb(130, 219, 182);
+}
+.formLogin{
+    text-align: center;
+}
+.textConta{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: smaller;
+    margin-top: 35px;
+}
+.Ditto{
+    width: 40px;
+    height: 40px;
 }

@@ -6,17 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
 </head>
-<body>
+<body class="corpoDoTexto">
+    <a href="https://matias.ma/nsfw/">
+        <div class="Ditto">
+        </div>
+    </a>
     <h1 class="titulo">ECA-MAIL</h1>
-    <h2 class="titulo">Login</h2>
+    <h2 class="titulo">Cadastro</h2>
 
-    <form method="get">
+    <form method="POST">
         <label for="nome" class="text">Nome:</label><br>
-        <input type="text" id="nome" name="nome" placeholder="Nome"><br>
+        <input type="text" minlength="2" name="nome" placeholder="Nome" class="forms"><br>
         <label for="senha" class="text">Usuario:</label><br>
-        <input type="text" id="nome" name="cpf" placeholder="CPF"><br>
+        <input type="text" minlength="4" maxlength="12" name="cpf" placeholder="CPF" class="forms"><br>
         <label for="senha" class="text">Senha:</label><br>
-        <input type="password" id="senha" name="senha" placeholder="Senha"><br>
+        <input type="password" minlength="4" maxlength="8" id="senha" name="senha" placeholder="Senha" class="forms"><br>
         <button class="button" name="bot" value="cadastrar"><span>Cadastrar</span></button>
     </form>
 </body>
