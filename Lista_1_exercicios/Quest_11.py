@@ -9,7 +9,7 @@ n1 = int(input("Digite um número interiro:  "))
 n2 = int(input("Digite um número inteiro: "))
 n3 = float(input("Digite um número real: "))
 
-n = int((2*n1)*(n2/2))
+n = ((2*n1)*(n2/2))
 
 print(f"O produto do dobro do primeiro com metade do segundo é: {n}")
 
