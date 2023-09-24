@@ -9,4 +9,8 @@ altura    = float(input("OBS: Informe o valor em centimetros "))
 altura = altura / 100
 pesoIdeal = float(((72.7 * altura) - 58)) 
 
-print(f"O seu peso ideal é {pesoIdeal}")
+if(0.40 < altura < 2.50):
+    pesoIdeal = float(((72.7 * altura) - 58))
+    print(f"O seu peso ideal é {pesoIdeal}")
+else:
+    print("Altura invalida")
