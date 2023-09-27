@@ -19,7 +19,7 @@ class retangulo():
         self.ladoA = novoLadoA
         self.ladoB = novoLadoB
     def retornavalores(self):
-        return 
+        return f"Um dos lador é {self.ladoA} e o segundo lado é {self.ladoB}"
     def calculaArea(self):
         return (self.ladoA * self.ladoB)
     def calculaPerimetro(self):
@@ -33,6 +33,6 @@ novoLadoB = float(input("Informe o segundo lado: "))
 
 retang1 = retangulo(novoLadoA, novoLadoB)
 
-print(f"Area do retangulo: {retang1.calculaArea()} m²\n")
+print(f"\n\nArea do retangulo: {retang1.calculaArea()} m²")
 pisos = (retang1.calculaArea() * 2)
-print(f"\n\nA quantidade de pisos necessarios é: {pisos}")
+print(f"A quantidade de pisos necessarios é: {pisos}")
