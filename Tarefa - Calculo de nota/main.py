@@ -1,6 +1,5 @@
 # Inclusão das bibliotecas
 from flask import Flask, render_template, request, redirect, url_for
-from fpdf import FPDF
 # inclui a página criada ao programa principal e depois inclui suas funções
 from modelo import professor
 
@@ -15,8 +14,10 @@ def inicio():
         botaoSelecionado = request.form['botao']
         if botaoSelecionado == 'login':
             return redirect("/login")
-        if botaoSelecionado == '':
+        if botaoSelecionado == 'tarefas':
             return redirect("/tarefas")
+        if botaoSelecionado == 'medias':
+            return redirect("/medias")
     return render_template("main.html")
 
 @app.route('/login', methods=['POST', 'GET'])
@@ -33,6 +34,10 @@ def login():
 @app.route('/tarefas', methods=['POST', 'GET'])
 def tarefas():
     return render_template("tarefas.html")
+
+@app.route("/medias", methods=['POST', 'GET'])
+def medias():
+    return render_template("medias.html")
 
 # Coloca o programa para rodar, tirar o "debug=True" qaundo o programa estiver finalizado
 app.run(debug=True)
