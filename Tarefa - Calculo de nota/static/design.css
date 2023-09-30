@@ -12,6 +12,19 @@ body{
 }
 .inicial_div{
     width: 500px;
-    height: 600px;
-    text-align: center;background-color: rgb(132, 160, 199);
+    height: 370px;
+    text-align: center;
+    background-color: rgb(132, 160, 199);
+}
+.login_div{
+    width: 500px;
+    height: 340px;
+    text-align: center;
+    border-radius: 18px;
+    background-color: rgb(132, 160, 199);
+    box-shadow:  inset 0 0 2em rgb(176, 209, 255);
+}
+.botao{
+    font-size: 18px;
+    cursor: pointer;
 }
