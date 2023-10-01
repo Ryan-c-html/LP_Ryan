@@ -1,9 +1,9 @@
 # A página de modelo terá algumas classes e funções
 
 # Importando as bibliotecas necessarias
-from fpdf import FPDF
-from time import sleep
+from fpdf import FPDF # Biblioteca que cria arquivos .pdf
 
+# Classe professor (tem as funções referentes ao professor)
 class professor():
     def __init__(self):
         pass
@@ -26,7 +26,7 @@ class professor():
                 arquivo.write("Miceli-1234\nRyan-1234")
             print("O arquivo 'logins.txt' não foi encontrado.")
         return False
-    def cadastro(self, nome, senha):
+    def cadastro(self, nome, senha): # Possivel cadastro de um novo professor
         self.nome = nome
         self.senha = senha
         try: 
@@ -35,17 +35,31 @@ class professor():
         except FileNotFoundError:
             with open("./Tarefa - Calculo de nota/logins.txt", "w") as txt:
                 txt.write(f"{self.nome} - {self.senha}\n")
-    def cadastroTarefa(self, data, nomeTarefa, tarefa):
+    def cadastroTarefa(self, data, nomeTarefa, tarefa): # Cadastro das tarefas em .txt
         self.data = data
         self.nomeTarefa = nomeTarefa
         self.tarefa = tarefa
         with open(f"./Tarefa - Calculo de nota/Tarefas/{nomeTarefa}.txt", "w") as txt:
             txt.write(f"{self.nomeTarefa}\n{self.data}\n{self.tarefa}")
-
+# Classe aluno
 class aluno():
     def __init__(self):
         pass
-    def calculaSituacao(self, t1, t2, l1, l2, l3, l4):
+    def verificaAluno(self, nome, dre): # Função que verifica se o aluno existe e cas não exista, salva o nome e dre dele
+        self.nome = nome
+        self.dre = dre
+        with open("./Tarefa - Calculo de nota/Alunos/aluno.txt", "r") as arquivo:
+            linhas = arquivo.readlines()
+            for i in linhas:
+                i = i.strip()
+                linha = i.split("-")
+                if len(linha) == 2 and self.nome == linha[0] and self.dre == linha[1]:
+                    pass
+                else:
+                    with open("./Tarefa - Calculo de nota/Alunos/aluno.txt", "a") as txt:
+                        txt.write(f"{self.nome} - {self.dre}")
+
+    def calculaSituacao(self, nome, t1, t2, l1, l2, l3, l4):
         media = (((t1 + t2) * 0.8) + (((l1 + l2 + l3 + l4) / 4)*0.2))
         if media >= 7:
             situação = "aprovado"
