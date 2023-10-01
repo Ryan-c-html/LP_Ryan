@@ -41,7 +41,21 @@ def medias():
 
 @app.route("/redireciona", methods=['POST', 'GET'])
 def redireciona():
+    if request.method == 'POST':
+        botaoSelecionado = request.form['botao']
+        if botaoSelecionado == 'tarefa':
+            return redirect("/tarefasProfessor")
+        elif botaoSelecionado == 'notas': 
+            return redirect("/notasProfessor")
     return render_template("redirecionaProfessor.html")
+
+@app.route("/tarefasProfessor", methods=['POST', 'GET'])
+def tarefaProfessor():
+    return render_template("tarefaProfessor.html")
+
+@app.route("/notasProfessor", methods=['POST', 'GET'])
+def notaProfessor():
+    return render_template("notaProfessor.html")
 
 # Coloca o programa para rodar, tirar o "debug=True" qaundo o programa estiver finalizado
 app.run(debug=True)
