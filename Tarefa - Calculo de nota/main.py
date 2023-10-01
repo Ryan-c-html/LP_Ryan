@@ -47,10 +47,21 @@ def redireciona():
             return redirect("/tarefasProfessor")
         elif botaoSelecionado == 'notas': 
             return redirect("/notasProfessor")
+        elif botaoSelecionado == 'voltar':
+            return redirect("/")
     return render_template("redirecionaProfessor.html")
 
 @app.route("/tarefasProfessor", methods=['POST', 'GET'])
 def tarefaProfessor():
+    if request.method == 'POST':
+        botaoSelecionado = request.form['botao']
+        if botaoSelecionado == 'criaTarefa':
+            data = request.form['dataEntrega']
+            nomeTarefa = request.form['nomeAtividade']
+            tarefa = request.form['tarefa']
+            professor1.cadastroTarefa( data, nomeTarefa, tarefa)
+        elif botaoSelecionado == 'voltar':
+            return redirect("/redireciona")
     return render_template("tarefaProfessor.html")
 
 @app.route("/notasProfessor", methods=['POST', 'GET'])

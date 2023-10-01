@@ -29,8 +29,18 @@ class professor():
     def cadastro(self, nome, senha):
         self.nome = nome
         self.senha = senha
-        with open("./logins.txt", "a") as txt:
-            txt.write(f"{self.nome} - {self.senha}\n")
+        try: 
+            with open("./Tarefa - Calculo de nota/logins.txt", "a") as txt:
+                txt.write(f"{self.nome} - {self.senha}\n")
+        except FileNotFoundError:
+            with open("./Tarefa - Calculo de nota/logins.txt", "w") as txt:
+                txt.write(f"{self.nome} - {self.senha}\n")
+    def cadastroTarefa(self, data, nomeTarefa, tarefa):
+        self.data = data
+        self.nomeTarefa = nomeTarefa
+        self.tarefa = tarefa
+        with open(f"./Tarefa - Calculo de nota/Tarefas/{nomeTarefa}.txt", "w") as txt:
+            txt.write(f"{self.nomeTarefa}\n{self.data}\n{self.tarefa}")
 
 class aluno():
     def __init__(self):

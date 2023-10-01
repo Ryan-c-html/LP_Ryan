@@ -1,0 +1,20 @@
+Calculo de notas
+2023-10-01
+Cálculo de nota - planejamento
+
+Os alunos devem escrever um documento descrevendo o planejamento de um sistema em flask que calcula as notas dos alunos armazenadas em um banco de dados. O sistema deve:
+
+- ter um login
+- cadastrar tarefas
+- cadastrar notas
+- calcular situação do aluno
+
+A nota deve ser calculada da seguinte forma:
+
+np = (t1+t2)*0.8 + (somatório de todas as listas dividido pelo número de listas)*0.2
+
+Se np >=7: passou
+se np >=3 and np< 7: final
+se não: reprovado
+
+Os alunos devem entregar um link do github com o código funcional.

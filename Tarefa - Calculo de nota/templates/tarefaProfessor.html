@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="./static/design.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarefas</title>
 </head>
 <body>
-    <h1>Escreva a tarefa</h1>
+    <div class="centraliza_div">
+        <h1>Escreva a tarefa</h1>
+        <div class="tarefaProfessor_div">
+            <form method="POST">
+                <label for="data" class="text" style="margin-left: 10px;">Data de entrega:</label>
+                <input type="date" id="dataEntrega" name="dataEntrega" class="forms"><br>
+                <label for="atividade" class="text" style="margin-left: 10px;">Nome da Tarefa:</label><br>
+                <input type="text" id="nomeAtividade" name="nomeAtividade" class="forms" placeholder="Nome da atividade"><br>
+                <label for="tarefa" class="text" style="margin-left: 10px;">Tarefa:</label><br>
+                <textarea id="tarefa" name="tarefa" class="forms" placeholder="Escreva a tarefa" minlength="10"></textarea><br>
+                <button class="button" name="botao" value="criaTarefa" style="margin-left: 350px; text-align: right;">Criar Tarefa</button>
+                <button class="button" name="botao" value="voltar" style="margin-left: 395px; text-align: right;">Voltar</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
