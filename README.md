@@ -14,5 +14,11 @@ O projeto da agenda tem como objetivo treinar programação e criar uma agenda t
 1. [Usando Py](https://www.usandopy.com/pt/artigo/como-criar-uma-agenda-telefonica-em-python/#google_vignette)
 
 --- 
-## Site Web
+## EmailFlask
 - **Linguagem:** `Python, HTML e Css.`
+
+---
+## Tarefa - Cálculo de nota
+- **Linguagem:** `Python, HTML e Css.`
+
+O programa dessa tarefa irá criar um site com: 
