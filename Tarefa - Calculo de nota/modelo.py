@@ -67,10 +67,7 @@ class aluno():
             for line in lines:
                 line = line.strip()
                 dados = line.split("-")
-                if len(dados) == 2 and self.dre == dados[0] and situacao == dados[1]:
+                if len(dados) == 2 and self.dre == dados[0]:
                     pass
-                elif len(dados) == 2 and self.dre == dados[0] and situacao != dados[1]:
-                    txt.write(f"{self.dre} - {situacao}")
-            with open("./Tarefa - Calculo de nota/Alunos/aluno.txt", "a") as arquivo:
-                arquivo.write(f"{self.dre} - {situacao}\n")
-        
+                else:
+                    txt.write(f"{self.dre} - {situacao}\n")
