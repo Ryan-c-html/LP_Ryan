@@ -38,7 +38,8 @@ def tarefas():
 
 @app.route("/medias", methods=['POST', 'GET'])
 def medias():
-    return render_template("medias.html")
+    conteudo = aluno1.leNota()
+    return render_template("medias.html", conteudo=conteudo)
 
 @app.route("/redireciona", methods=['POST', 'GET'])
 def redireciona():

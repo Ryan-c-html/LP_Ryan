@@ -62,12 +62,8 @@ class aluno():
         else:
             situacao = "reprovado"
         
-        with open("./Tarefa - Calculo de nota/Alunos/aluno.txt", "+r") as txt:
-            lines = txt.readlines()
-            for line in lines:
-                line = line.strip()
-                dados = line.split("-")
-                if len(dados) == 2 and self.dre == dados[0]:
-                    pass
-                else:
-                    txt.write(f"{self.dre} - {situacao}\n")
+        with open("./Tarefa - Calculo de nota/Alunos/aluno.txt", "a") as txt:
+            txt.write(f"{self.dre} - {situacao}\n")
+    def leNota(self):
+        with open("./Tarefa - Calculo de nota/Alunos/aluno.txt", "r") as nota:
+            return nota.read()
