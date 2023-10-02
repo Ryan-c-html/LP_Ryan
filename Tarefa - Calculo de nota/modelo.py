@@ -45,26 +45,32 @@ class professor():
 class aluno():
     def __init__(self):
         pass
-    def verificaAluno(self, nome, dre): # Função que verifica se o aluno existe e cas não exista, salva o nome e dre dele
+    def postagemNotas(self, nome, dre, t1, t2, l1, l2, l3, l4): # Função que verifica se o aluno existe e cas não exista, salva o nome e dre dele
         self.nome = nome
         self.dre = dre
-        with open("./Tarefa - Calculo de nota/Alunos/aluno.txt", "r") as arquivo:
-            linhas = arquivo.readlines()
-            for i in linhas:
-                i = i.strip()
-                linha = i.split("-")
-                if len(linha) == 2 and self.nome == linha[0] and self.dre == linha[1]:
-                    pass
-                else:
-                    with open("./Tarefa - Calculo de nota/Alunos/aluno.txt", "a") as txt:
-                        txt.write(f"{self.nome} - {self.dre}")
-
-    def calculaSituacao(self, nome, t1, t2, l1, l2, l3, l4):
+        t1 = float(t1)
+        t2 = float(t2)
+        l1 = float(l1)
+        l2 = float(l2)
+        l3 = float(l3)
+        l4 = float(l4)
         media = (((t1 + t2) * 0.8) + (((l1 + l2 + l3 + l4) / 4)*0.2))
         if media >= 7:
-            situação = "aprovado"
+            situacao = "aprovado"
         elif 7 > media and media >= 3:
-            situação = "final"
+            situacao = "final"
         else:
-            situação = "reprovado"
-        return situação
+            situacao = "reprovado"
+        
+        with open("./Tarefa - Calculo de nota/Alunos/aluno.txt", "+r") as txt:
+            lines = txt.readlines()
+            for line in lines:
+                line = line.strip()
+                dados = line.split("-")
+                if len(dados) == 2 and self.dre == dados[0] and situacao == dados[1]:
+                    pass
+                elif len(dados) == 2 and self.dre == dados[0] and situacao != dados[1]:
+                    txt.write(f"{self.dre} - {situacao}")
+            with open("./Tarefa - Calculo de nota/Alunos/aluno.txt", "a") as arquivo:
+                arquivo.write(f"{self.dre} - {situacao}\n")
+        

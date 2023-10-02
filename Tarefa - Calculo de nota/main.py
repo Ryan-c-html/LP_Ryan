@@ -6,6 +6,7 @@ from modelo import professor, aluno
 app = Flask(__name__)
 
 professor1 = professor()
+aluno1 = aluno()
 
 # Página de inicio (Main)
 @app.route('/', methods=['POST', 'GET'])
@@ -66,6 +67,20 @@ def tarefaProfessor():
 
 @app.route("/notasProfessor", methods=['POST', 'GET'])
 def notaProfessor():
+    if request.method == 'POST':
+        botaoSelecionado = request.form['botao']
+        if botaoSelecionado == 'cadastraNota':
+            nome = request.form['nomeAluno']
+            dre = request.form['dreAluno']
+            nota1 = request.form['nota1']
+            nota2 = request.form['nota2']
+            lista1 = request.form['lista1']
+            lista2 = request.form['lista2']
+            lista3 = request.form['lista3']
+            lista4 = request.form['lista4']
+            aluno1.postagemNotas(nome, dre, nota1, nota2, lista1, lista2, lista3, lista4)
+        elif botaoSelecionado == 'voltar':
+            return redirect("/redireciona")
     return render_template("notaProfessor.html")
 
 # Coloca o programa para rodar, tirar o "debug=True" qaundo o programa estiver finalizado

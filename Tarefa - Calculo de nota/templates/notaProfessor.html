@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="./static/design.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notas</title>
 </head>
 <body>
-    <h1>Dê as notas</h1>
+    <div class="centraliza_div">
+        <h1 style="font-size: 40px;">Postagem das notas</h1>
+        <div class="notaprofessor_div">
+            <form method="POST">
+                <label for="nome" class="text">Nome:</label>
+                <input type="text" id="nomeAluno" name="nomeAluno" class="forms" placeholder="Nome do Aluno"><br>
+                <label for="dre" class="text">DRE:</label>
+                <input type="text" id="nomeAluno" name="dreAluno" class="forms" placeholder="DRE do Aluno"><br>
+                <h2 style="text-align: center;">Notas do aluno</h2>
+                <label for="nota1" class="text">Primeira nota:</label>
+                <input type="text" id="nota1" name="nota1" class="forms" placeholder="Primeira nota do aluno"><br>
+                <label for="nota2" class="text">Segunda nota:</label>
+                <input type="text" id="nota2" name="nota2" class="forms" placeholder="Segunda nota do aluno"><br><br>
+                <label for="lista1" class="text">Nota na lista 1:</label>
+                <input type="text" id="lista1" name="lista1" class="forms" placeholder="Primeira Lista"><br>
+                <label for="lista2" class="text">Nota na lista 2:</label>
+                <input type="text" id="lista2" name="lista2" class="forms" placeholder="Segunda Lista"><br>
+                <label for="lista3" class="text">Nota na lista 3:</label>
+                <input type="text" id="lista3" name="lista3" class="forms" placeholder="Terceira Lista"><br>
+                <label for="lista4" class="text">Nota na lista 4:</label>
+                <input type="text" id="lista4" name="lista4" class="forms" placeholder="Quarta Lista"><br>
+                <button class="button" name="botao" value="cadastraNota" style="margin-left: 320px;">Cadastrar Nota</button>
+                <button class="button" name="botao" value="voltar" style="margin-left: 395px;">Voltar</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
