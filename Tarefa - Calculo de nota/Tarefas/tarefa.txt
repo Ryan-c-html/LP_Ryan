@@ -1,0 +1,12 @@
+Calculo de notas
+
+Data de entrega: 2023-01-05
+Tarefa:Desenvolver uma pagina para cadastrar e postar a tarefa e as notas dos alunos.
+
+Criar um site de apostas
+
+Data de entrega: 2023-05-10
+Tarefa:Postagem de uma página de apostas onde tenha um prêmio e as pessoas possam dar seu lance.
+
+
+

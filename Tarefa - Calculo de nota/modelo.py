@@ -39,8 +39,8 @@ class professor():
         self.data = data
         self.nomeTarefa = nomeTarefa
         self.tarefa = tarefa
-        with open(f"./Tarefa - Calculo de nota/Tarefas/{nomeTarefa}.txt", "w") as txt:
-            txt.write(f"{self.nomeTarefa}\n{self.data}\n{self.tarefa}")
+        with open(f"./Tarefa - Calculo de nota/Tarefas/tarefa.txt", "a") as txt:
+            txt.write(f"{self.nomeTarefa}\n\nData de entrega: {self.data}\nTarefa:{self.tarefa}\n\n\n\n")
 # Classe aluno
 class aluno():
     def __init__(self):
@@ -67,3 +67,6 @@ class aluno():
     def leNota(self):
         with open("./Tarefa - Calculo de nota/Alunos/aluno.txt", "r") as nota:
             return nota.read()
+    def leTarefa(self):
+        with open("./Tarefa - Calculo de nota/Tarefas/tarefa.txt", "r") as txt:
+            return txt.read() 

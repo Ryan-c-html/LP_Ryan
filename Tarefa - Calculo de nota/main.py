@@ -34,7 +34,8 @@ def login():
 
 @app.route('/tarefas', methods=['POST', 'GET'])
 def tarefas():
-    return render_template("tarefas.html")
+    conteudo = aluno1.leTarefa()
+    return render_template("tarefas.html", conteudo=conteudo)
 
 @app.route("/medias", methods=['POST', 'GET'])
 def medias():
