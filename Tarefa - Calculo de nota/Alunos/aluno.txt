@@ -1,9 +1,1 @@
-123123103 - aprovado
-123123104 - reprovado
-124125103 - aprovado
-123456789 - aprovado
-123456789 - aprovado
-123456789 - aprovado
-123123103 - aprovado
-123123104 - final
-144233108 - reprovado
+12345678 - final
