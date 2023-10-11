@@ -25,19 +25,23 @@ class contaCorrente():
 conta1 = contaCorrente(1055, "Ryan", 10000)
 
 print("\n\n\n\n_____Bem vindo ao nosso banco!_____\n")
-acao = input("Qual será sua primeira ação?\nDigite:\n         1. Acessar saldo\n         2. Depositar\n         3. Sacar\n         4. Alterar Nome\n")
 
-if(acao == 1):
-    print(f"\nO seu saldo é: {conta1.verificarSaldo()}")
-elif(acao == 2):
-    dinheiro = float(input("\nO quanto deseja depositar?\n"))
-    conta1.deposito(dinheiro)
-    print(f"\nVocê possui {conta1.verificarSaldo()} na sua conta")
-elif(acao == 3):
-    dinheiro = float(input("\nO quanto deseja sacar?\n"))
-    conta1.saque(dinheiro)
-    print(f"\nVocê possui {conta1.verificarSaldo()} na sua conta")
-elif(acao == 4):
-    nome = input("\nQual será seu novo nome?")
-    conta1.alterarNome(nome)
-    print(f"Seu nome foi alterado para {conta1.nomeCorrentista}")
+while True:
+    print("Ações:\n         1. Acessar saldo\n         2. Depositar\n         3. Sacar\n         4. Alterar Nome\n")
+    acao = input("Qual será sua primeira ação?")
+    if(acao == '1'):
+        print(f"\nO seu saldo é: {conta1.verificarSaldo()}")
+    elif(acao == '2'):
+        dinheiro = float(input("\nO quanto deseja depositar?\n"))
+        conta1.deposito(dinheiro)
+        print(f"\nVocê possui {conta1.verificarSaldo()} na sua conta")
+    elif(acao == '3'):
+        dinheiro = float(input("\nO quanto deseja sacar?\n"))
+        conta1.saque(dinheiro)
+        print(f"\nVocê possui {conta1.verificarSaldo()} na sua conta")
+    elif(acao == '4'):
+        nome = input("\nQual será seu novo nome?")
+        conta1.alterarNome(nome)
+        print(f"Seu nome foi alterado para {conta1.nomeCorrentista}")
+    else:
+        print("\n\nAção invalida")

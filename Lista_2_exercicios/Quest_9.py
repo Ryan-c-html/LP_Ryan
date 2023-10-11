@@ -17,16 +17,41 @@ class ponto():
         self.x = x
         self.y = y
     def imprimeValores(self):
-        return f"x: {self.x}e y: {self.y}"
-    def 
+        print(f"x: {self.x}e y: {self.y}")
+
 class retangulo():
-    def __init__(self, largura, altura):
+    def __init__(self, pontoInicial, largura, altura):
+        self.pontoinicial = pontoInicial
         self.largura = largura
         self.altura = altura
     def centro(self):
-        centroLargura = self.largura / 2
-        centroAltura = self.altura / 2
-        return centroAltura, centroLargura
+        centroLargura = (self.pontoinicial.x + self.largura) / 2
+        centroAltura = (self.pontoIncial.y + self.altura) / 2
+        return ponto(centroAltura, centroLargura)
 
-retangulo = retangulo(5, 2)
-quadrado = retangulo(4, 4)
+def menu():
+    print("\n\n\n")
+    print("1. Criar retangulo")
+    print("2. Encontrar centro\n")
+
+print("\n\n\nComeço do programa!")
+
+quadrado = None
+while True:
+    menu()
+    opcao = input("Deseja qual das opções?")
+    if opcao == '1':
+        x = float(input("O (x) onde o triangulo começa: "))
+        y = float(input("O (y) onde o triangulo começa: "))
+        lado1 = float(input("O primeiro lado do retangulo é: "))
+        lado2 = float(input("O segundo lado do retangulo é: "))
+        pontoInicial = ponto(x, y)
+        quadrado = retangulo(pontoInicial, lado1, lado2)
+    elif opcao == '2':
+        if quadrado:
+            centro = quadrado.centro()
+            print(f"O centro do objeto é: {centro}")
+        else:
+            print("Ação invalida. Crie o retangulo primeiro")
+    else:
+        print("Opção invalida!")
