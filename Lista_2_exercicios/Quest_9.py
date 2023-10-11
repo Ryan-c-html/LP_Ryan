@@ -11,3 +11,22 @@ A função para encontrar o centro do retângulo deve retornar o valor para um o
 O valor do centro do objeto deve ser mostrado na tela
 Crie um menu para alterar os valores do retângulo e imprimir o centro deste retângulo.
 '''
+
+class ponto():
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    def imprimeValores(self):
+        return f"x: {self.x}e y: {self.y}"
+    def 
+class retangulo():
+    def __init__(self, largura, altura):
+        self.largura = largura
+        self.altura = altura
+    def centro(self):
+        centroLargura = self.largura / 2
+        centroAltura = self.altura / 2
+        return centroAltura, centroLargura
+
+retangulo = retangulo(5, 2)
+quadrado = retangulo(4, 4)
