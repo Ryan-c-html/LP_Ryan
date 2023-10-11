@@ -22,3 +22,8 @@ O projeto da agenda tem como objetivo treinar programação e criar uma agenda t
 - **Linguagem:** `Python, HTML e Css.`
 
 O programa dessa tarefa irá criar um site com: 
+---
+## Lista 2
+- **Linguagem:** `Python.`
+
+A lista 2 tem questões de classe. Ela possui 17 questões e todas são focadas em como ensinar a trabalhar com classes.
