@@ -21,7 +21,8 @@ O projeto da agenda tem como objetivo treinar programação e criar uma agenda t
 ## Tarefa - Cálculo de nota
 - **Linguagem:** `Python, HTML e Css.`
 
-O programa dessa tarefa irá criar um site com: 
+O programa dessa tarefa irá criar um site com:
+
 ---
 ## Lista 2
 - **Linguagem:** `Python.`
